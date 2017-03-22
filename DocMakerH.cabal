@@ -16,6 +16,10 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     Quoter
+                      ,Quoter.ParseHelpers
+                      ,Quoter.Utils
+                      ,Quoter.PrettyPrinters
+                      ,Quoter.Types
   build-depends:       base >= 4.7 && < 5
                       ,regex-posix
                       ,regex-compat

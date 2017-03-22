@@ -1,13 +1,11 @@
 {-# LANGUAGE TemplateHaskell, QuasiQuotes, FlexibleContexts #-}
 
-import Language.Haskell.TH
 import Quoter
+import Quoter.PrettyPrinters
+import Quoter.Types
 
-ex1 :: Q Exp
-ex1 = [| \x -> x |]
-
-
-ex4 = [qq1|
+ex4 :: [TestCase]
+ex4 = [testcases|
 TESTCASE
 DESC
   Registration
@@ -35,15 +33,14 @@ PROC
   Close site
 OUTP
   Account created
-  looooooooooooooooooooooooooooooooooooooooooooooooooooooong
 DATE
   25.05.2016
 FAIL
 NOTE
   Some note
 |]
-
-
+{-
+rawExamples :: [TestCase]
 rawExamples = [
   TestCase
       "Registration"
@@ -67,7 +64,6 @@ rawExamples = [
       Pass
       Nothing
   ]
-
-
-main = do
-  writeFile "cases.md" $ makeMD ex4
+-}
+main :: IO ()
+main = writeFile "cases.md" $ showMDtable ex4
