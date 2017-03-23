@@ -1,4 +1,26 @@
-| Id | Description | Steps | Output | Result | Date | Notes |
-|----|-------------|-------|--------|--------|------|-------|
-|TC1|  Registration|<ol><li>  Open site,  which <br/>is site http </li><li>  Enter smth </li><li>  Close site</li></ol>|  Account created  l<br/>oooooooooooooooooooo<br/>oooooooooooooooooooo<br/>ooooooooooooooong|Pass|19.11.2016||
-|TC2|  Registration|<ol><li>  Open site,  which <br/>is site http </li><li>  Enter smth </li><li>  Close site</li></ol>|  Account created|Fail|25.5.2016||
++---------+---------+---------+---------+---------+---------+---------+
+| Id      | Descrip | Steps   | Output  | Result  | Date    | Notes   |
+|         | tion    |         |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+| TC1     | Registr | 1.  Ope | Account | Pass    | 19.11.2 |         |
+|         | ation   | n       | created |         | 016     |         |
+|         |         |     sit | l\      |         |         |         |
+|         |         | e,      | ooooooo |         |         |         |
+|         |         |     whi | ooooooo |         |         |         |
+|         |         | ch\     | oooooo\ |         |         |         |
+|         |         |     is  | ooooooo |         |         |         |
+|         |         |     sit | ooooooo |         |         |         |
+|         |         | e       | oooooo\ |         |         |         |
+|         |         |     htt | ooooooo |         |         |         |
+|         |         | p       | ooooooo |         |         |         |
+|         |         | 2.  Ent | ong     |         |         |         |
+|         |         | er      |         |         |         |         |
+|         |         |     smt |         |         |         |         |
+|         |         | h       |         |         |         |         |
+|         |         | 3.  Clo |         |         |         |         |
+|         |         | se      |         |         |         |         |
+|         |         |     sit |         |         |         |         |
+|         |         | e       |         |         |         |         |
++---------+---------+---------+---------+---------+---------+---------+
+
+

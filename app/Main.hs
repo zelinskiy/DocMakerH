@@ -1,44 +1,12 @@
 {-# LANGUAGE TemplateHaskell, QuasiQuotes, FlexibleContexts #-}
 
-import Quoter
 import Quoter.PrettyPrinters
-import Quoter.Types
+import TestCasesEx(example)
 
-ex4 :: [TestCase]
-ex4 = [testcases|
-TESTCASE
-DESC
-  Registration
-PROC
-  Open site,
-  which is site http |>
-  Enter smth |>
-  Close site
-OUTP
-  Account created
-  looooooooooooooooooooooooooooooooooooooooooooooooooooooong
-DATE
-  19.11.2016
-PASS
-NOTE
-  Some note
+main :: IO ()
+main = writeFile "cases.html" $ showHTMLtable example
 
-TESTCASE
-DESC
-  Registration
-PROC
-  Open site,
-  which is site http |>
-  Enter smth |>
-  Close site
-OUTP
-  Account created
-DATE
-  25.05.2016
-FAIL
-NOTE
-  Some note
-|]
+
 {-
 rawExamples :: [TestCase]
 rawExamples = [
@@ -65,5 +33,3 @@ rawExamples = [
       Nothing
   ]
 -}
-main :: IO ()
-main = writeFile "cases.md" $ showMDtable ex4
