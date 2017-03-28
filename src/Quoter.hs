@@ -28,7 +28,7 @@ quoteExp1 = lift . map parseTestCase . drop 1 . deepDelimBy "TESTCASE"
 parseTestCase :: String -> TestCase
 parseTestCase s = TestCase{
   desc = clear $ enclosedBy "DESC" "PROC" s,
-  proc = delimBy "|>" $ clear $ enclosedBy "PROC" "OUTP" s,
+  proc = deepDelimBy "\\|>" $ clear $ enclosedBy "\nPROC\n" "\nOUTP\n" s,
   outp = clear $ enclosedBy "OUTP" "DATE" s,
   date = catchDate $ enclosedBy "DATE" "NOTE" s,
   result = checkRes $ enclosedBy "DATE" "NOTE" s,

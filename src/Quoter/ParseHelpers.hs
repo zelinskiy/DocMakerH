@@ -3,6 +3,7 @@ module Quoter.ParseHelpers where
 import Text.Regex
 import Quoter.Types
 
+-- NOTE splits PROC on o letter
 delimBy :: String -> String -> [String]
 delimBy d = splitRegex $ mkRegex ("["++d++"]+")
 

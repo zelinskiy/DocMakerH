@@ -27,7 +27,7 @@ showHTML :: Int -> TestCase -> MDoutput
 showHTML i (TestCase desc proc outp date res note) =
   "<tr><td>" ++ "TC" ++ show i ++ "</td>"
   ++ "<td>" ++ br desc ++ "</td>"
-  ++ "<td><ol>" ++ concatMap (\p -> "<li>" ++ br p ++ "</li>") proc ++ "</ol></td>"
+  ++ "<td><ol start=\"0\">" ++ concatMap (\p -> "<li>" ++ br p ++ "</li>") proc ++ "</ol></td>"
   ++ "<td>" ++ br outp ++ "</td>"
   ++ "<td>" ++ show res ++ "</td>"
   ++ "<td>" ++ show date ++ "</td>"
